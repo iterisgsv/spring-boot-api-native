@@ -1,0 +1,29 @@
+POST http://{{host}}:8080/api/people
+Content-Type: application/json
+
+{
+  "name": "Gustavo",
+  "age": 33
+}
+
+###
+GET http://{{host}}:8080/actuator/metrics/jvm.memory.max
+
+###
+
+GET http://{{host}}:8080/api/people?sort=name&sort=createdDate
+
+###
+GET http://{{host}}:8080/api/people/1
+
+###
+PUT http://{{host}}:8080/api/people/1
+Content-Type: application/json
+
+{
+  "name": "Gustavo Silva",
+  "age": 33
+}
+
+###
+DELETE http://{{host}}:8080/api/people/1
